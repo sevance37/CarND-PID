@@ -11,12 +11,11 @@ The program is written in C++.  This Project is from Udacity's Self-Driving Car 
 
 ## The Parameters
 #### This PID (proportional–integral–derivative) controller has 3 parameters that depend on the error (the cross track error). 
-1. P Component:  The P or proportional component scales linearly with the error. The larger the error, the larger the steering angle to get the car back to the track. This causes the car to contually steer toward the path and results in overshoots or oscillations.
+1. **P Component**:  The P or proportional component scales linearly with the error. The larger the error, the larger the steering angle to get the car back to the track. This causes the car to contually steer toward the path and results in overshoots or oscillations.
 
-2. I Component:  The I or integral component is the sum of all of the errors over time. If car stays to one side of the path too long, this term will grow large and increase the steering angle to get the car back to the path. An example of this would be the car going around a curve. The I term will then continue to push the car to the other side of the path until the I term goes to zero. This behavior results in overshoots and oscillations. 
+2. **I Component**:  The I or integral component is the sum of all of the errors over time. If car stays to one side of the path too long, this term will grow large and increase the steering angle to get the car back to the path. An example of this would be the car going around a curve. The I term will then continue to push the car to the other side of the path until the I term goes to zero. This behavior results in overshoots and oscillations. 
 
-3. D Component:  The D or derivative component is related to the change in the error. When the change in the error is large, this term 
-is large. This dampens the oscillations caused by the P and I components.
+3. **D Component**:  The D or derivative component is related to the change in the error. When the change in the error is large, this term is large. This dampens the oscillations caused by the P and I components.
 
 The components of this PID controller behaved as described above. This was observed by varying the magnitude of each term individually.
 
